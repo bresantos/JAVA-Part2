@@ -112,11 +112,11 @@ String tecnologia = "java";
 		
 		///foreach
 		
-		ArrayList<Interger> list = new ArrayList<Interger>();
+		ArrayList<Integer> list = new ArrayList<Integer>();
 		for(int l=0; l<10; l++) {
 			list.add(l);
 		}
-		for(Interger numero : list) {
+		for(Integer numero : list) {
 			System.out.println(numero);
 		}
 		
@@ -185,3 +185,5 @@ String tecnologia = "java";
 	}
 	
 }
+
+
