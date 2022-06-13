@@ -1,0 +1,187 @@
+
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class ParteDois {
+
+	public static void main(String[] args) {
+
+		
+		
+		String[] faces = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Valete", "Dama", "Rei"};
+		String[] nipes = {"Espadas", "Paus", "Copas", "Ouros"};
+		
+		Random r = new Random();
+		
+		int indiceFace = r.nextInt(faces.length);
+		String face = faces[indiceFace];
+		
+		int indiceNipe = r.nextInt(nipes.length);
+		String nipe = nipes[indiceNipe];
+		
+		
+		String carta = face + " " + nipe;
+		System.out.println(carta);
+		
+		
+		//ArrayList
+		
+		ArrayList<String> cores = new ArrayList<>();
+		cores.add("Branco");
+		cores.add("Vermelho");
+		cores.add("Amarelo");
+		cores.add("Azul");
+		System.out.println(cores.toString());
+		
+		System.out.println("Tamanho=" + cores.size());
+		System.out.println("Elemento2" + cores.get(2));
+		System.out.println("Indice Branco=" + cores.indexOf("Branco"));
+		
+		cores.remove("Branco");
+		
+		System.out.println("Tem Amarelo ?" + cores.contains("Amarelo"));
+		
+		
+		
+		//if else
+		
+		int nota = 2;
+		if (nota >= 7){
+		System.out.println("Passou");
+	
+		} else if (nota <=6){
+		System.out.println("Não Passou");
+		}
+
+		//Switch
+		
+String tecnologia = "java";
+		
+		switch (tecnologia) {
+		case "java":
+		case "c++":
+			System.out.println("Linguagem de Programacao");
+			break;
+			
+		case "oracle":
+		case "sqlserver":
+			System.out.println("Banco de Dados");
+			break;
+			
+		}
+		
+		
+		//Desafio de Dados
+		
+		//Palpite? Valor do Dado? Palpite ok?
+		
+		
+		JOptionPane.showMessageDialog(null, "JOGO DE DADOS");
+		
+		String p = JOptionPane.showInputDialog("Digite seu palpite");
+		int palpite = Integer.parseInt(p);
+		System.out.println(palpite);
+		 
+		
+		int[] dado = {1, 2, 3, 4, 5, 6};
+		Random d = new Random();
+		int tentativa = d.nextInt(dado.length);
+		System.out.println(tentativa);
+		
+		
+		if (palpite == tentativa) {
+			JOptionPane.showMessageDialog(null, "Acertou!");
+		} else {
+			JOptionPane.showMessageDialog(null, "Errou!");
+		}
+		
+		
+		//for
+		
+		int tamanho = 5;
+		for (int x=0; x<tamanho; x++){
+			for(int i=0; i<tamanho; i++){
+			System.out.print("* ");
+			}
+			System.out.println();
+		}
+		
+		
+		///foreach
+		
+		ArrayList<Interger> list = new ArrayList<Interger>();
+		for(int l=0; l<10; l++) {
+			list.add(l);
+		}
+		for(Interger numero : list) {
+			System.out.println(numero);
+		}
+		
+		
+		
+		//while, do while
+				ArrayList<String> produtos = new ArrayList <String>();
+				Scanner s = new Scanner (System.in);
+				System.out.println("Liste seus Produtos : Para sair digite FIM");
+				
+				String produto;
+				while(!"FIM".equals(produto = s.nextLine())) {
+					produtos.add(produto);
+				}
+				System.out.println(produtos.toString());
+				
+				
+				
+				
+		//Desafio Fibonatti
+				
+				int anterior = 0;
+				int proximo = 1;
+				System.out.println(anterior);
+				
+				while(proximo < 50) {
+				System.out.println(proximo);
+				proximo = proximo + anterior;
+				anterior = proximo - anterior;
+				}
+				
+				
+		//Label, Break e Continue
+				
+		boolean[][] matrix =
+		{
+				{false, true, false, false, false},
+				{false, false, false, false, false}
+		};
+		
+		for(int a=0; a < matrix.length; a++) {
+			System.out.println("A ");
+			for(int b=0; b <matrix[a].length; b++) {
+				if(matrix[a][b]) {
+				System.out.print("TRUE ");
+				break;
+			}		
+			System.out.print("B ");
+		}
+		}
+		
+		//AutoBoxing
+		
+		int x = (555);
+		x++;
+		System.out.println(x);
+		
+		Boolean v = new Boolean("true");
+		if(v) {
+			System.out.println(v);
+		}
+		
+		
+		
+		
+	}
+	
+}
